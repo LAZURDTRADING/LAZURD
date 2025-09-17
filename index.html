@@ -7,24 +7,23 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* إضافات خاصة بالصفحة الرئيسية */
+    /* Hero Section */
     .hero {
       text-align: center;
-      padding: 80px 20px;
+      padding: 100px 20px;
       background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                  url('https://images.unsplash.com/photo-1521791136064-7986c2920216') 
-                  no-repeat center/cover;
+                  url('https://images.unsplash.com/photo-1521791136064-7986c2920216') no-repeat center/cover;
       color: white;
     }
 
     .hero h2 {
-      font-size: 36px;
+      font-size: 40px;
       margin-bottom: 20px;
       animation: slideDown 1s ease-out;
     }
 
     .hero p {
-      font-size: 18px;
+      font-size: 20px;
       animation: slideUp 1s ease-out;
     }
 
@@ -37,46 +36,199 @@
       from { opacity: 0; transform: translateY(50px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    /* Services Section */
+    .services-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .service-card {
+      background: white;
+      padding: 25px 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    .service-card i {
+      font-size: 36px;
+      color: #0f3057;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #0f3057;
+    }
+
+    .service-card p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    /* Why Choose Us */
+    .why-choose {
+      padding: 50px 20px;
+      text-align: center;
+      background: #f8f9fa;
+    }
+
+    .why-choose h3 {
+      font-size: 28px;
+      color: #0f3057;
+      margin-bottom: 30px;
+    }
+
+    .why-choose ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .why-choose li {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      font-size: 16px;
+    }
+
+    /* Social Links */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .social-card {
+      background: white;
+      padding: 20px 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-decoration: none;
+      color: #333;
+      min-width: 250px;
+    }
+
+    .social-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    .social-card i {
+      font-size: 36px;
+      color: #0f3057;
+    }
+
+    .social-card span {
+      font-size: 16px;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>LAZURD</h1>
-    <p>شركة الوساطة المالية الرائدة</p>
-  </header>
+<header>
+  <h1>LAZURD</h1>
+  <p>شركة الوساطة المالية الرائدة</p>
+</header>
 
-  <nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="services.html">الخدمات</a>
-    <a href="about.html">من نحن</a>
-    <a href="contact.html">تواصل معنا</a>
-  </nav>
+<nav>
+  <a href="index.html">الرئيسية</a>
+  <a href="services.html">الخدمات</a>
+  <a href="about.html">من نحن</a>
+  <a href="contact.html">تواصل معنا</a>
+</nav>
 
-  <!-- قسم Hero مع صورة خلفية -->
-  <section class="hero">
-    <h2>استثمر بثقة مع LAZURD</h2>
-    <p>نقدم لك حلول استثمارية آمنة واحترافية لتداول الذهب والعملات والأسهم.</p>
-  </section>
+<!-- Hero Section -->
+<section class="hero">
+  <h2>استثمر بثقة مع LAZURD</h2>
+  <p>حلول استثمارية آمنة واحترافية لتداول الذهب والعملات والأسهم مع فريق دعم على مدار الساعة.</p>
+</section>
 
-  <section class="section">
-    <h3>خدماتنا</h3>
-    <p>تداول آمن | منصات حديثة | دعم فني على مدار الساعة</p>
-  </section>
+<!-- Services Section -->
+<section class="services-container">
+  <div class="service-card">
+    <i class="fas fa-coins"></i>
+    <h3>تداول الذهب</h3>
+    <p>أدوات تداول متقدمة مع متابعة دقيقة للسوق.</p>
+  </div>
+  <div class="service-card">
+    <i class="fas fa-chart-line"></i>
+    <h3>تداول العملات (Forex)</h3>
+    <p>استفد من فرص السوق العالمي بأزواج العملات الأساسية.</p>
+  </div>
+  <div class="service-card">
+    <i class="fas fa-building-columns"></i>
+    <h3>الأسهم والمؤشرات</h3>
+    <p>تداول الأسهم العالمية مع تحليلات دقيقة.</p>
+  </div>
+  <div class="service-card">
+    <i class="fas fa-headset"></i>
+    <h3>دعم فني 24/7</h3>
+    <p>فريق الدعم متواجد دائمًا لمساعدتك في أي وقت.</p>
+  </div>
+</section>
 
-  <section class="section">
-    <h3>لماذا تختارنا؟</h3>
-    <p>خبرة سنوات في الأسواق المالية - شراكة طويلة الأمد مع عملائنا</p>
-  </section>
+<!-- Why Choose Us -->
+<section class="why-choose">
+  <h3>لماذا تختارنا؟</h3>
+  <ul>
+    <li>خبرة سنوات طويلة في الأسواق المالية</li>
+    <li>منصات تداول حديثة وسهلة الاستخدام</li>
+    <li>دعم فني احترافي على مدار الساعة</li>
+    <li>تداول آمن وموثوق مع التزام بالشفافية</li>
+    <li>شراكة طويلة الأمد مع عملائنا</li>
+  </ul>
+</section>
 
-  <footer>
-    <p>جميع الحقوق محفوظة © 2019 LAZURD</p>
-  </footer>
-
-  <!-- زر WhatsApp عائم -->
-  <a href="https://wa.me/963933988214" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
+<!-- Social Links -->
+<section class="social-links">
+  <a href="https://www.facebook.com/share/1AW1eVTYD7/?mibextid=wwXIfr" target="_blank" class="social-card">
+    <i class="fab fa-facebook-f"></i>
+    <span>صفحتنا على Facebook</span>
   </a>
+  <a href="https://t.me/LAZURDTRIDING" target="_blank" class="social-card">
+    <i class="fab fa-telegram-plane"></i>
+    <span>قناة تعليمية على Telegram</span>
+  </a>
+  <a href="https://t.me/LAZURDACADIMY" target="_blank" class="social-card">
+    <i class="fab fa-telegram-plane"></i>
+    <span>القناة الإخبارية على Telegram</span>
+  </a>
+  <a href="https://www.instagram.com/tridinglazurd?igsh=MWRtd2ZheHhoNXBrOQ%3D%3D&utm_source=qr" target="_blank" class="social-card">
+    <i class="fab fa-instagram"></i>
+    <span>صفحتنا على Instagram</span>
+  </a>
+</section>
+
+<footer>
+  <p>جميع الحقوق محفوظة © 2019 LAZURD</p>
+</footer>
+
+<!-- WhatsApp floating button -->
+<a href="https://wa.me/963933988214" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
 </body>
 </html>
