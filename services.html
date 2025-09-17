@@ -6,34 +6,160 @@
   <title>LAZURD - الخدمات</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url('https://images.unsplash.com/photo-1581091870620-13c2c58f19cb') no-repeat center/cover;
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      animation: slideDown 1s ease-out;
+    }
+
+    .hero p {
+      font-size: 18px;
+      animation: slideUp 1s ease-out;
+    }
+
+    /* Services grid */
+    .services-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .service-card {
+      background: white;
+      padding: 25px 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    .service-card i {
+      font-size: 40px;
+      color: #0f3057;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #0f3057;
+    }
+
+    .service-card p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    /* Animations */
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+  </style>
 </head>
 <body>
 
-<header>
-  <h1>LAZURD</h1>
-  <p>شركة الوساطة المالية الرائدة</p>
-</header>
+  <header>
+    <h1>LAZURD</h1>
+    <p>شركة الوساطة المالية الرائدة</p>
+  </header>
 
-<nav>
-  <a href="index.html">الرئيسية</a>
-  <a href="services.html">الخدمات</a>
-  <a href="about.html">من نحن</a>
-  <a href="contact.html">تواصل معنا</a>
-</nav>
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="services.html">الخدمات</a>
+    <a href="about.html">من نحن</a>
+    <a href="contact.html">تواصل معنا</a>
+  </nav>
 
-<section class="section">
-  <h2>خدماتنا</h2>
-  <p>تداول العملات، الذهب، الأسهم، والاستشارات المالية.</p>
-  <p>منصات حديثة وواجهة سهلة الاستخدام لجميع العملاء.</p>
-</section>
+  <!-- Hero -->
+  <section class="hero">
+    <h2>خدماتنا الاستثمارية المتميزة</h2>
+    <p>نقدم مجموعة متكاملة من الخدمات المالية لتلبية احتياجات المستثمرين الأفراد والشركات.</p>
+  </section>
 
-<footer>
-  <p>جميع الحقوق محفوظة © 2019 LAZURD</p>
-</footer>
+  <!-- Services Grid -->
+  <section class="services-container">
 
-<a href="https://wa.me/963933988214" class="whatsapp-float" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
+    <div class="service-card">
+      <i class="fas fa-coins"></i>
+      <h3>تداول الذهب</h3>
+      <p>استثمر في الذهب بطريقة آمنة وفعالة مع منصة LAZURD الحديثة.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-chart-line"></i>
+      <h3>تداول العملات (Forex)</h3>
+      <p>استفد من فرص السوق العالمي وتداول أزواج العملات الرئيسية بسهولة.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-building-columns"></i>
+      <h3>الأسهم والمؤشرات</h3>
+      <p>تداول الأسهم المحلية والعالمية مع متابعة دقيقة للأسواق والمؤشرات.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-file-contract"></i>
+      <h3>العقود مقابل الفروقات (CFD)</h3>
+      <p>استفد من تقلبات السوق وحقق أرباح عبر أدوات مالية متنوعة.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-wallet"></i>
+      <h3>إدارة المحافظ الاستثمارية</h3>
+      <p>نقدم خدمات إدارة محفظتك المالية لتحقيق أعلى عائد ممكن وفق خطط مخصصة.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-chart-pie"></i>
+      <h3>الاستشارات والتحليل المالي</h3>
+      <p>خبراؤنا يقدمون تحليلات دقيقة ونصائح مالية مستمرة لمساعدتك على اتخاذ القرار الصحيح.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-desktop"></i>
+      <h3>منصات تداول حديثة</h3>
+      <p>استمتع بمنصات تداول سهلة الاستخدام، متوافقة مع الكمبيوتر والهواتف الذكية.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-headset"></i>
+      <h3>دعم فني 24/7</h3>
+      <p>فريق الدعم متواجد دائماً للإجابة على استفساراتك وحل أي مشكلة بسرعة.</p>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>جميع الحقوق محفوظة © 2019 LAZURD</p>
+  </footer>
+
+  <!-- WhatsApp floating button -->
+  <a href="https://wa.me/963933988214" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
 </body>
 </html>
