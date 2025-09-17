@@ -6,6 +6,38 @@
   <title>LAZURD - الرئيسية</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* إضافات خاصة بالصفحة الرئيسية */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                  url('https://images.unsplash.com/photo-1521791136064-7986c2920216') 
+                  no-repeat center/cover;
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      animation: slideDown 1s ease-out;
+    }
+
+    .hero p {
+      font-size: 18px;
+      animation: slideUp 1s ease-out;
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
 
@@ -21,102 +53,7 @@
     <a href="contact.html">تواصل معنا</a>
   </nav>
 
-  <section class="section">
-    <h2>استثمر بثقة مع LAZURD</h2>
-    <p>نقدم لك حلول استثمارية آمنة واحترافية لتداول الذهب والعملات والأسهم.</p>
-  </section>
-
-  <section class="section">
-    <h3>خدماتنا</h3>
-    <p>تداول آمن | منصات حديثة | دعم فني على مدار الساعة</p>
-  </section>
-
-  <footer>
-    <p>جميع الحقوق محفوظة © 2025 LAZURD</p>
-  </footer>
-
-  <a href="https://wa.me/963933988214" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-</body>
-</html>      border-radius: 50px;
-      font-weight: bold;
-      transition: transform 0.2s, background 0.3s;
-      background-color: #25D366;
-      color: white;
-    }
-
-    .whatsapp-button:hover {
-      transform: scale(1.1);
-      background-color: #1ebe5d;
-    }
-
-    /* WhatsApp Floating Button */
-    .whatsapp-float {
-      position: fixed;
-      width: 70px;
-      height: 70px;
-      bottom: 25px;
-      right: 25px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 32px;
-      box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-      z-index: 100;
-      animation: bounce 2s infinite;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: background 0.3s, transform 0.2s;
-    }
-
-    .whatsapp-float:hover {
-      background-color: #1ebe5d;
-      transform: scale(1.2);
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideDown {
-      from { opacity: 0; transform: translateY(-50px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(50px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-      40% { transform: translateY(-10px); }
-      60% { transform: translateY(-5px); }
-    }
-  </style>
-  <!-- FontAwesome لأيقونة WhatsApp -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-
-  <header>
-    <h1>LAZURD</h1>
-    <p>شركة الوساطة المالية الرائدة</p>
-  </header>
-
-  <nav>
-    <a href="#">الرئيسية</a>
-    <a href="#">الخدمات</a>
-    <a href="#">من نحن</a>
-    <a href="#">تواصل معنا</a>
-  </nav>
-
+  <!-- قسم Hero مع صورة خلفية -->
   <section class="hero">
     <h2>استثمر بثقة مع LAZURD</h2>
     <p>نقدم لك حلول استثمارية آمنة واحترافية لتداول الذهب والعملات والأسهم.</p>
@@ -134,7 +71,6 @@
 
   <footer>
     <p>جميع الحقوق محفوظة © 2019 LAZURD</p>
-    <a href="https://wa.me/963933988214" target="_blank" class="whatsapp-button">💬 تواصل معنا عبر WhatsApp</a>
   </footer>
 
   <!-- زر WhatsApp عائم -->
