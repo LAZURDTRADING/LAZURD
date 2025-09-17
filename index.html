@@ -11,13 +11,20 @@
       padding: 0;
       background: #f8f9fa;
       color: #333;
+      scroll-behavior: smooth;
     }
 
+    /* Header */
     header {
       background: #0f3057;
       color: white;
       padding: 20px;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: background 0.3s;
     }
 
     header h1 {
@@ -26,58 +33,136 @@
       letter-spacing: 2px;
     }
 
+    /* Nav */
     nav {
       display: flex;
       justify-content: center;
       background: #00587a;
+      transition: background 0.3s;
     }
 
     nav a {
       color: white;
       padding: 14px 20px;
       text-decoration: none;
-      transition: background 0.3s;
+      transition: background 0.3s, transform 0.2s;
     }
 
     nav a:hover {
       background: #008891;
+      transform: scale(1.1);
     }
 
+    /* Hero Section */
     .hero {
       text-align: center;
-      padding: 60px 20px;
+      padding: 80px 20px;
       background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1521791136064-7986c2920216') no-repeat center/cover;
       color: white;
+      animation: fadeIn 2s ease-in;
     }
 
     .hero h2 {
       font-size: 36px;
       margin-bottom: 20px;
+      animation: slideDown 1s ease-out;
     }
 
     .hero p {
       font-size: 18px;
+      animation: slideUp 1s ease-out;
     }
 
+    /* Sections */
     .section {
-      padding: 40px 20px;
+      padding: 60px 20px;
       text-align: center;
+      animation: fadeIn 1.5s ease-in;
     }
 
     .section h3 {
-      font-size: 24px;
+      font-size: 28px;
       margin-bottom: 20px;
       color: #0f3057;
     }
 
+    /* Footer */
     footer {
       background: #0f3057;
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 25px;
       margin-top: 40px;
+      position: relative;
+    }
+
+    .whatsapp-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      transition: transform 0.2s, background 0.3s;
+      background-color: #25D366;
+      color: white;
+    }
+
+    .whatsapp-button:hover {
+      transform: scale(1.1);
+      background-color: #1ebe5d;
+    }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      width: 70px;
+      height: 70px;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 32px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+      z-index: 100;
+      animation: bounce 2s infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #1ebe5d;
+      transform: scale(1.2);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
     }
   </style>
+  <!-- FontAwesome لأيقونة WhatsApp -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -110,7 +195,13 @@
 
   <footer>
     <p>جميع الحقوق محفوظة © 2019 LAZURD</p>
+    <a href="https://wa.me/963933988214" target="_blank" class="whatsapp-button">💬 تواصل معنا عبر WhatsApp</a>
   </footer>
+
+  <!-- زر WhatsApp عائم -->
+  <a href="https://wa.me/963933988214" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
 </body>
 </html>
