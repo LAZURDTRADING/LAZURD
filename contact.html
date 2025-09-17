@@ -6,6 +6,61 @@
   <title>LAZURD - تواصل معنا</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .contact-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 32px;
+      color: #0f3057;
+      margin-bottom: 20px;
+    }
+
+    .contact-section p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    /* Social Links Grid */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .social-card {
+      background: white;
+      padding: 20px 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-decoration: none;
+      color: #333;
+      min-width: 250px;
+    }
+
+    .social-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    .social-card i {
+      font-size: 36px;
+      color: #0f3057;
+    }
+
+    .social-card span {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
 
@@ -21,18 +76,39 @@
   <a href="contact.html">تواصل معنا</a>
 </nav>
 
-<section class="section">
+<section class="contact-section">
   <h2>تواصل معنا</h2>
-  <p>📞 +الهاتف:00963933988214</p>
+  <p>📞 الهاتف: 00963933988214</p>
   <p>📧 البريد الإلكتروني: lazurdtrading@gmail.com</p>
   <p>💬 أو تواصل معنا مباشرة عبر WhatsApp</p>
   <a href="https://wa.me/963933988214" target="_blank" class="button button-whatsapp">💬 تواصل عبر WhatsApp</a>
+
+  <!-- Social Links -->
+  <div class="social-links">
+    <a href="https://www.facebook.com/share/1AW1eVTYD7/?mibextid=wwXIfr" target="_blank" class="social-card">
+      <i class="fab fa-facebook-f"></i>
+      <span>صفحتنا على Facebook</span>
+    </a>
+    <a href="https://t.me/LAZURDTRIDING" target="_blank" class="social-card">
+      <i class="fab fa-telegram-plane"></i>
+      <span>قناة تعليمية على Telegram</span>
+    </a>
+    <a href="https://t.me/LAZURDACADIMY" target="_blank" class="social-card">
+      <i class="fab fa-telegram-plane"></i>
+      <span>القناة الإخبارية على Telegram</span>
+    </a>
+    <a href="https://www.instagram.com/tridinglazurd?igsh=MWRtd2ZheHhoNXBrOQ%3D%3D&utm_source=qr" target="_blank" class="social-card">
+      <i class="fab fa-instagram"></i>
+      <span>صفحتنا على Instagram</span>
+    </a>
+  </div>
 </section>
 
 <footer>
   <p>جميع الحقوق محفوظة © 2019 LAZURD</p>
 </footer>
 
+<!-- WhatsApp floating button -->
 <a href="https://wa.me/963933988214" class="whatsapp-float" target="_blank">
   <i class="fab fa-whatsapp"></i>
 </a>
